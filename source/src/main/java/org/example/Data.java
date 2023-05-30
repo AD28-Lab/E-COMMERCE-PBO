@@ -129,7 +129,7 @@ public class Data {
                         record.put("First_Name", rs.getString("first_name"));
                         record.put("Last_Name", rs.getString("last_name"));
                         record.put("Email", rs.getString("email"));
-                        record.put("Phone Number", rs.getString("phone_number"));
+                        record.put("Phone Number", rs.getString("phone_numbers"));
                         record.put("Type", rs.getString("type"));
                         array.add(record);
                     }
@@ -167,7 +167,7 @@ public class Data {
                         record.put("First_Name", rs.getString("first_name"));
                         record.put("Last_Name", rs.getString("last_name"));
                         record.put("Email", rs.getString("email"));
-                        record.put("Phone Number", rs.getString("phone_number"));
+                        record.put("Phone Number", rs.getString("phone_numbers"));
                         record.put("Type", rs.getString("type"));
                         array.add(record);
                     }
@@ -186,11 +186,11 @@ public class Data {
             String first_name = (String) requestBodyJson.get("first_name");
             String last_name = (String) requestBodyJson.get("last_name");
             String email = (String) requestBodyJson.get("email");
-            String phone_number = (String) requestBodyJson.get("phone_number");
+            String phone_number = (String) requestBodyJson.get("phone_numbers");
             String type = (String) requestBodyJson.get("type");
             PreparedStatement statement = null;
             int rowsAffected = 0;
-            String query = "INSERT INTO users(first_name, last_name, email, phone_number, type) VALUES(?,?,?,?,?)";
+            String query = "INSERT INTO users(first_name, last_name, email, phone_numbers, type) VALUES(?,?,?,?,?)";
             try {
                 Connection connection = DriverManager.getConnection("jdbc:sqlite:../../../../SQLiteDatabase/ecommerce.db");
                 statement = connection.prepareStatement(query);
@@ -265,11 +265,11 @@ public class Data {
             String first_name = (String) requestBodyJson.get("first_name");
             String last_name = (String) requestBodyJson.get("last_name");
             String email = (String) requestBodyJson.get("email");
-            String phone_number = (String) requestBodyJson.get("phone_number");
+            String phone_number = (String) requestBodyJson.get("phone_numbers");
             String type = (String) requestBodyJson.get("type");
             PreparedStatement statement = null;
             int rowsAffected = 0;
-            String query = "INSERT INTO users(first_name, last_name, email, phone_number, type) VALUES(?,?,?,?,?)";
+            String query = "INSERT INTO users(first_name, last_name, email, phone_numbers, type) VALUES(?,?,?,?,?)";
             try {
                 Connection connection = DriverManager.getConnection("jdbc:sqlite:../../../../SQLiteDatabase/ecommerce.db");
                 statement = connection.prepareStatement(query);
