@@ -28,7 +28,7 @@ public class Main {
             Connection connection = null;
             String rootPath = System.getProperty("user.dir");
             try {
-                String url = "jdbc:sqlite:C:\\Users\\USER\\IdeaProjects\\E-COMMERCE-PBO\\ecommerce";
+                String url = "jdbc:sqlite:C:\\Users\\USER\\IdeaProjects\\E-COMMERCE-PBO\\ecommerce.db";
                 connection = DriverManager.getConnection(url);
                 System.out.println("Connection to SQLite has been established");
             }   catch (SQLException e){
